@@ -63,7 +63,7 @@
 #include "MutiTouchTest/MutiTouchTest.h"
 #if (CC_TARGET_PLATFORM != CC_PLATFORM_MARMALADE)
 #include "ClippingNodeTest/ClippingNodeTest.h"
-#include "ChipmunkTest/ChipmunkTest.h"
+//#include "ChipmunkTest/ChipmunkTest.h"
 #endif
 #include "FileUtilsTest/FileUtilsTest.h"
 #include "SpineTest/SpineTest.h"
