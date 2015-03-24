@@ -22,7 +22,6 @@ public:
 
     bool onTouchBegan(Touch* touch, Event* event);
     void onTouchMoved(Touch* touch, Event* event);
-
 public:
     static MenuLayer* menuWithEntryID(int entryId);
 };

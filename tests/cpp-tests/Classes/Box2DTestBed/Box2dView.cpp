@@ -56,7 +56,7 @@ bool MenuLayer::initWithEntryID(int entryId)
     
     Box2DView* view = Box2DView::viewWithEntryID( entryId );
     addChild(view, 0, kTagBox2DNode);
-    view->setScale(15);
+    view->setScale(5);
     view->setAnchorPoint( Vec2(0,0) );
     view->setPosition(visibleOrigin.x+visibleSize.width/2, visibleOrigin.y+visibleSize.height/3);
     auto label = Label::createWithTTF(view->title().c_str(), "fonts/arial.ttf", 28);

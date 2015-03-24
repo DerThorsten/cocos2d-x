@@ -196,6 +196,11 @@ set(TESTS_SRC
   Classes/AppDelegate.cpp
   Classes/BaseTest.cpp
   Classes/VisibleRect.cpp
+Classes/Box2DTest/Box2dTest.cpp
+Classes/Box2DTestBed/Box2dView.cpp
+Classes/Box2DTestBed/GLES-Render.cpp
+Classes/Box2DTestBed/Test.cpp
+Classes/Box2DTestBed/TestEntries.cpp
   ${PLATFORM_SRC}
 )
 
@@ -203,15 +208,15 @@ if(USE_CHIPMUNK)
   include_directories(${CHIPMUNK_INCLUDE_DIRS})
 endif()
 
-if(USE_BOX2D)
-  list(APPEND TESTS_SRC
-    Classes/Box2DTest/Box2dTest.cpp
-    Classes/Box2DTestBed/Box2dView.cpp
-    Classes/Box2DTestBed/GLES-Render.cpp
-    Classes/Box2DTestBed/Test.cpp
-    Classes/Box2DTestBed/TestEntries.cpp
-    )
-endif()
+#if(USE_BOX2D)
+#  list(APPEND TESTS_SRC
+#    Classes/Box2DTest/Box2dTest.cpp
+#    Classes/Box2DTestBed/Box2dView.cpp
+#    Classes/Box2DTestBed/GLES-Render.cpp
+#    Classes/Box2DTestBed/Test.cpp
+#    Classes/Box2DTestBed/TestEntries.cpp
+#    )
+#endif()
 
 if(LINUX)
     set(EXTENDED_TESTS_SRC

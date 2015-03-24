@@ -16,7 +16,7 @@ Box2DTestLayer::Box2DTestLayer()
 : _spriteTexture(nullptr)
 , world(nullptr)
 {
-#if CC_ENABLE_BOX2D_INTEGRATION
+#if 1//CC_ENABLE_BOX2D_INTEGRATION
     auto dispatcher = Director::getInstance()->getEventDispatcher();
     
     auto touchListener = EventListenerTouchAllAtOnce::create();
@@ -29,15 +29,15 @@ Box2DTestLayer::Box2DTestLayer()
     this->createResetButton();
 
     //Set up sprite
-#if 1
+
     // Use batch node. Faster
     auto parent = SpriteBatchNode::create("Images/blocks.png", 100);
     _spriteTexture = parent->getTexture();
-#else
+
     // doesn't use batch node. Slower
-    _spriteTexture = Director::getInstance()->getTextureCache()->addImage("Images/blocks.png");
-    auto parent = Node::create();
-#endif
+    //_spriteTexture = Director::getInstance()->getTextureCache()->addImage("Images/blocks.png");
+    // auto parent = Node::create();
+
     addChild(parent, 0, kTagParentNode);
 
 
